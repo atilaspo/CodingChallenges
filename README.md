@@ -5,7 +5,7 @@ This repository contains my solutions to various programming and algorithmic cha
 ## Table of Contents
 1. [Overview](#overview)
 2. [How to Use](#how-to-use)
-3. [Examples of Challenges](#examples-of-challenges)
+3. [Challenges](#challenges)
 6. [Contact](#contact)
 
 ---
@@ -35,9 +35,9 @@ This repository contains my solutions to various programming and algorithmic cha
 
 ---
 
-## Examples of Challenges
+## Challenges
 
-### 1. Encode and Decode Strings
+### 1. **[Encode and Decode Strings](string-encode-and-decode.py)**
 - **Goal**: Encode an array of strings into a single string, then decode it back into the original array.
 - **Approach**: For each string, store its length followed by `#`, then the string.
 - **Time Complexity**: O(m) where m is the total length of all strings.
