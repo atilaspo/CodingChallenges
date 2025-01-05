@@ -6,7 +6,7 @@ This repository contains my solutions to various programming and algorithmic cha
 1. [Overview](#overview)
 2. [How to Use](#how-to-use)
 3. [Challenges](#challenges)
-6. [Contact](#contact)
+4. [Contact](#contact)
 
 ---
 
@@ -43,7 +43,18 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: O(m) where m is the total length of all strings.
 - **Space Complexity**: O(1) auxiliary (excluding the final output).
 
+### 2. **[Valid Sudoku](valid-sudoku.py)**
+- **Goal**: Validate a 9x9 Sudoku board by checking that:
+  - Each row contains unique digits.
+  - Each column contains unique digits.
+  - Each 3x3 subgrid contains unique digits.
+- **Approach**:
+  - Use three dictionaries (`defaultdict(set)`) to track seen numbers in rows, columns, and subgrids.
+  - If a duplicate is found in any row, column, or subgrid, return `False`.
+- **Time Complexity**: O(1) (fixed size of 81 cells for a 9x9 board).
+- **Space Complexity**: O(1) additional space (ignoring input size).
 
+---
 
 ## Contact
 
