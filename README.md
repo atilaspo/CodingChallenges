@@ -85,6 +85,17 @@ This repository contains my solutions to various programming and algorithmic cha
     - Otherwise, they are not.
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the longer string (`s` or `t`).
 - **Space Complexity**: \(O(k)\), where \(k\) is the number of unique characters in the strings.
+
+### 6. **[Two Sum](two-sum.py)**
+- **Goal**: Find two indices \(i\) and \(j\) in an array `nums` such that \(nums[i] + nums[j] = target\) and \(i \neq j\).
+- **Approach**:
+  - Use a dictionary (`memory`) to store numbers and their indices as you iterate through the array.
+  - For each number, calculate its complement (`target - num`) and check if it exists in the dictionary:
+    - If it does, return the indices of the complement and the current number.
+    - Otherwise, store the current number and its index in the dictionary.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the input array.
+- **Space Complexity**: \(O(n)\), for the dictionary storing encountered numbers.
+- **Code**:
 ---
 
 ## Contact
