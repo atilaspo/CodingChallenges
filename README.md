@@ -74,6 +74,17 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: O(n), where n is the length of the input array.
 - **Space Complexity**: O(n), for the dictionary storing encountered numbers.
 
+### 5. **[Valid Anagram](valid-anagram.py)**
+- **Goal**: Determine if two strings are anagrams of each other. Two strings are anagrams if they have the same characters with the same frequencies.
+- **Approach**:
+  - First, check if the lengths of the two strings are different. If they are, return `False` immediately.
+  - Create two dictionaries (`mem_s` and `mem_t`) to store the frequency of each character in the strings `s` and `t`.
+  - Iterate through each character in `s` and `t`, updating the dictionaries to count the occurrences of each character.
+  - Compare the two dictionaries:
+    - If they are equal, the strings are anagrams.
+    - Otherwise, they are not.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the longer string (`s` or `t`).
+- **Space Complexity**: \(O(k)\), where \(k\) is the number of unique characters in the strings.
 ---
 
 ## Contact
