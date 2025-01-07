@@ -54,6 +54,16 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: O(1) (fixed size of 81 cells for a 9x9 board).
 - **Space Complexity**: O(1) additional space (ignoring input size).
 
+### 3. **[Longest Consecutive Sequence](longest-consecutive-sequence.py)**
+- **Goal**: Find the length of the longest consecutive sequence of integers in an array.
+- **Approach**:
+  - Use a `set` to store the unique integers in the array for fast lookup.
+  - For each number, check if it is the start of a sequence (`num - 1` not in the set).
+  - If it is, extend the sequence by checking for consecutive numbers (`num + 1`, `num + 2`, etc.) in the set.
+  - Keep track of the longest sequence found.
+- **Time Complexity**: O(n), where n is the length of the input array.
+- **Space Complexity**: O(n), for the `set` storing the unique numbers.
+
 ---
 
 ## Contact
