@@ -64,6 +64,16 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: O(n), where n is the length of the input array.
 - **Space Complexity**: O(n), for the `set` storing the unique numbers.
 
+### 4. **[Contains Duplicate](contains-duplicate.py)**
+- **Goal**: Determine if any value appears more than once in an array.
+- **Approach**:
+  - Use a dictionary (`memory`) to keep track of numbers encountered so far.
+  - Iterate through the array and check if a number is already in the dictionary:
+    - If it is, return `True` (duplicate found).
+    - Otherwise, add the number to the dictionary.
+- **Time Complexity**: O(n), where n is the length of the input array.
+- **Space Complexity**: O(n), for the dictionary storing encountered numbers.
+
 ---
 
 ## Contact
