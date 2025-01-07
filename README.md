@@ -95,7 +95,16 @@ This repository contains my solutions to various programming and algorithmic cha
     - Otherwise, store the current number and its index in the dictionary.
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the input array.
 - **Space Complexity**: \(O(n)\), for the dictionary storing encountered numbers.
-- **Code**:
+
+### 7. **[Valid Palindrome](valid-palindrome.py)**
+- **Goal**: Determine if a given string is a palindrome, considering only alphanumeric characters and ignoring cases.
+- **Approach**:
+  - Filter out all non-alphanumeric characters from the string and convert it to lowercase.
+  - Use two pointers (`i` and `j`) to compare characters from the beginning and the end of the string:
+    - If any pair of characters does not match, return `False`.
+    - If all characters match, the string is a palindrome.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the input string.
+- **Space Complexity**: \(O(n)\), for the filtered and converted string.
 ---
 
 ## Contact
