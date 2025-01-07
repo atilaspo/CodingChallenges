@@ -105,6 +105,19 @@ This repository contains my solutions to various programming and algorithmic cha
     - If all characters match, the string is a palindrome.
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the input string.
 - **Space Complexity**: \(O(n)\), for the filtered and converted string.
+
+### 8. **[Two Sum II - Input Array Is Sorted](two-sum-ii.py)**
+- **Goal**: Find two indices \(i\) and \(j\) (1-indexed) in a sorted array `numbers` such that \(numbers[i] + numbers[j] = target\) and \(i < j\).
+- **Approach**:
+  - Use two pointers:
+    - One pointer starts at the beginning of the array (`l`).
+    - The other starts at the end of the array (`r`).
+  - Calculate the sum of the numbers pointed to by `l` and `r`:
+    - If the sum is greater than the target, move the right pointer (`r`) to the left.
+    - If the sum is less than the target, move the left pointer (`l`) to the right.
+    - If the sum equals the target, return the indices adjusted to 1-indexed.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the input array.
+- **Space Complexity**: \(O(1)\), since no additional data structures are used.
 ---
 
 ## Contact
