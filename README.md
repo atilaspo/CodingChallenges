@@ -118,6 +118,15 @@ This repository contains my solutions to various programming and algorithmic cha
     - If the sum equals the target, return the indices adjusted to 1-indexed.
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the input array.
 - **Space Complexity**: \(O(1)\), since no additional data structures are used.
+
+### 9. **[3Sum](three-sum.py)**
+- **Goal**: Find all unique triplets in the array that sum up to `0`. Each triplet should be returned only once, even if there are duplicates in the array.
+- **Approach**:
+  - Sort the array to simplify handling duplicates and use the two-pointer technique.
+  - Iterate through the array, fixing one number at a time, and use two pointers to find pairs that sum to the opposite of the fixed number.
+  - Skip duplicates for both the fixed number and the two pointers to avoid duplicate triplets.
+- **Time Complexity**: \(O(n^2)\), where \(n\) is the length of the array.
+- **Space Complexity**: \(O(1)\), since no additional data structures are used (excluding the result list).
 ---
 
 ## Contact
