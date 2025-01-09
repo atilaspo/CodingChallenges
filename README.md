@@ -127,6 +127,22 @@ This repository contains my solutions to various programming and algorithmic cha
   - Skip duplicates for both the fixed number and the two pointers to avoid duplicate triplets.
 - **Time Complexity**: \(O(n^2)\), where \(n\) is the length of the array.
 - **Space Complexity**: \(O(1)\), since no additional data structures are used (excluding the result list).
+
+### 10. **[Container With Most Water](container-with-most-water.py)**
+- **Goal**: Given an array `heights` where `heights[i]` represents the height of the \(i^{th}\) bar, find two bars that form a container that can store the maximum amount of water.
+- **Approach**:
+  - Use the two-pointer technique:
+    - Start with one pointer at the beginning (`l`) and one at the end (`r`) of the array.
+    - Calculate the area of water the container can hold using the formula:
+    
+    - Area = min(heights[l], heights[r]) * distance (r - l)
+    
+    - Move the pointer pointing to the smaller height inward to try and find a taller bar.
+
+    - Keep track of the maximum area encountered during the process.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the array.
+- **Space Complexity**: \(O(1)\), since no additional data structures are used.
+
 ---
 
 ## Contact
