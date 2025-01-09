@@ -143,6 +143,17 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the array.
 - **Space Complexity**: \(O(1)\), since no additional data structures are used.
 
+### 11. **[Trapping Rain Water](trapping-rain-water.py)**
+- **Goal**: Given an array `height` where `height[i]` represents the elevation at index \(i\), calculate how much water can be trapped after raining.
+- **Approach**:
+  - Use the two-pointer technique to calculate trapped water:
+    - Initialize two pointers (`l` and `r`) at the beginning and end of the array.
+    - Maintain variables `max_left` and `max_right` to store the maximum height seen so far from the left and right.
+    - Move the pointer pointing to the smaller height inward, and calculate the trapped water based on the difference between the current height and the maximum height on that side.
+    - Add the trapped water for each step.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the array.
+- **Space Complexity**: \(O(1)\), since no additional data structures are used.
+
 ---
 
 ## Contact
