@@ -170,6 +170,18 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the string.
 - **Space Complexity**: \(O(n)\), for the stack used to store unmatched brackets.
 
+### 13. **[Min Stack](min-stack.py)**
+- **Goal**: Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+- **Approach**:
+  - Use two stacks:
+    1. **`stack`**: Stores all the elements.
+    2. **`min_stack`**: Tracks the minimum value at each point in time.
+  - For every `push` operation, calculate the new minimum and add it to `min_stack`.
+  - For every `pop` operation, remove the top element from both `stack` and `min_stack`.
+  - The minimum element can always be retrieved from the top of `min_stack`.
+- **Time Complexity**: \(O(1)\) for all operations (`push`, `pop`, `top`, `getMin`).
+- **Space Complexity**: \(O(n)\), where \(n\) is the number of elements in the stack.
+
 ---
 
 ## Contact
