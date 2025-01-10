@@ -154,6 +154,22 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the array.
 - **Space Complexity**: \(O(1)\), since no additional data structures are used.
 
+### 12. **[Valid Parentheses](valid-parentheses.py)**
+- **Goal**: Determine if a given string `s` consisting of the characters `(`, `)`, `{`, `}`, `[`, and `]` is valid.
+  - A string is valid if:
+    1. Every open bracket is closed by the same type of bracket.
+    2. Open brackets are closed in the correct order.
+    3. Every close bracket has a corresponding open bracket of the same type.
+- **Approach**:
+  - Use a **stack** to track unmatched open brackets:
+    - When encountering an open bracket, push it onto the stack.
+    - When encountering a closing bracket, check if it matches the last open bracket in the stack:
+      - If it matches, pop the stack.
+      - If it doesn’t match or the stack is empty, return `False`.
+    - At the end, the stack should be empty if all brackets are valid.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the string.
+- **Space Complexity**: \(O(n)\), for the stack used to store unmatched brackets.
+
 ---
 
 ## Contact
