@@ -182,6 +182,16 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(1)\) for all operations (`push`, `pop`, `top`, `getMin`).
 - **Space Complexity**: \(O(n)\), where \(n\) is the number of elements in the stack.
 
+### 14. **[Evaluate Reverse Polish Notation](evaluate-reverse-polish-notation.py)**
+- **Goal**: Evaluate an arithmetic expression in Reverse Polish Notation (RPN). The input is a list of tokens representing numbers and operators (`+`, `-`, `*`, `/`).
+- **Approach**:
+  - Use a stack to store numbers and intermediate results:
+    - Push numbers onto the stack.
+    - When encountering an operator, pop the top two elements from the stack, perform the operation, and push the result back onto the stack.
+  - Division truncates toward zero.
+- **Time Complexity**: \(O(n)\), where \(n\) is the number of tokens.
+- **Space Complexity**: \(O(n)\), for the stack.
+
 ---
 
 ## Contact
