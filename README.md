@@ -203,6 +203,18 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(4^n / \sqrt{n})\), due to the Catalan number property.
 - **Space Complexity**: \(O(n)\), for the recursion stack and temporary `stack`.
 
+### 16. **[Daily Temperatures](daily-temperatures.py)**
+- **Goal**: Given a list of daily temperatures, determine how many days you need to wait for a warmer temperature. If no future day has a warmer temperature, the result for that day should be `0`.
+- **Approach**:
+  - Use a **monotonic decreasing stack** to keep track of temperatures and their indices.
+  - For each temperature:
+    - Compare it with the last temperature in the stack.
+    - If it is warmer, pop the stack and calculate the difference in indices to update the result.
+    - Push the current temperature and its index onto the stack.
+  - If the stack is not empty after processing all temperatures, the remaining indices correspond to days with no warmer temperature.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the input array. Each temperature is pushed and popped from the stack at most once.
+- **Space Complexity**: \(O(n)\), for the stack and result array.
+
 ---
 
 ## Contact
