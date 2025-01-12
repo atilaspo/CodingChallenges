@@ -215,6 +215,19 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the input array. Each temperature is pushed and popped from the stack at most once.
 - **Space Complexity**: \(O(n)\), for the stack and result array.
 
+### 17. **[Car Fleet](car-fleet.py)**
+- **Goal**: Determine the number of car fleets that will arrive at a given target position on a single-lane highway.
+- **Approach**:
+  - Combine the `position` and `speed` arrays into pairs and sort them in descending order of position.
+  - Use a variable `last_time` to track the time of the last fleet to arrive at the destination.
+  - For each car:
+    - Calculate its time to the destination.
+    - If the current car's time is greater than `last_time`, it forms a new fleet.
+    - Update `last_time` to the current car's time.
+  - Count the number of fleets using a simple counter.
+- **Time Complexity**: \(O(n \log n)\), due to the sorting step.
+- **Space Complexity**: \(O(1)\), auxiliary space.
+
 ---
 
 ## Contact
