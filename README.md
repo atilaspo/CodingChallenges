@@ -192,6 +192,17 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of tokens.
 - **Space Complexity**: \(O(n)\), for the stack.
 
+### 15. **[Generate Parentheses](generate-parentheses.py)**
+- **Goal**: Generate all combinations of well-formed parentheses given an integer `n`, representing the number of pairs of parentheses.
+- **Approach**:
+  - Use **backtracking** to explore all possible combinations of parentheses:
+    - Add a `(` if the number of open parentheses is less than `n`.
+    - Add a `)` if the number of close parentheses is less than the number of open parentheses.
+    - Stop when both open and close parentheses are equal to `n`, and add the current combination to the result.
+  - Use a `stack` to build each combination step by step and backtrack by removing the last added element (`stack.pop()`).
+- **Time Complexity**: \(O(4^n / \sqrt{n})\), due to the Catalan number property.
+- **Space Complexity**: \(O(n)\), for the recursion stack and temporary `stack`.
+
 ---
 
 ## Contact
