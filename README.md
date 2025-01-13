@@ -228,6 +228,17 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n \log n)\), due to the sorting step.
 - **Space Complexity**: \(O(1)\), auxiliary space.
 
+### 18. **[Largest Rectangle in Histogram](largest-rectangle-in-histogram.py)**
+- **Goal**: Given an array of bar heights representing a histogram, find the area of the largest rectangle that can be formed within the histogram.
+- **Approach**:
+  - Use a **monotonic stack** to keep track of the heights and their starting indices.
+  - For each bar:
+    - If the current bar height is less than the height of the bar on top of the stack, calculate the area for the rectangle with the popped bar as the smallest height.
+    - Track the starting index of each rectangle.
+  - After processing all bars, calculate the area for the remaining bars in the stack.
+- **Time Complexity**: \(O(n)\), as each bar is pushed and popped from the stack at most once.
+- **Space Complexity**: \(O(n)\), for the stack.
+
 ---
 
 ## Contact
