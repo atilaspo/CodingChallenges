@@ -239,6 +239,20 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), as each bar is pushed and popped from the stack at most once.
 - **Space Complexity**: \(O(n)\), for the stack.
 
+### 19. **[Reverse Linked List](reverse-linked-list.py)**
+- **Goal**: Reverse a singly linked list, so that the last node becomes the head and all pointers are reversed.
+- **Approach**:
+  - Use two pointers:
+    - `prev`: Tracks the previous node, starting as `None`.
+    - `curr`: Tracks the current node, starting at the head of the list.
+  - Traverse the list:
+    - Save the next node temporarily.
+    - Reverse the current node's pointer to point to the previous node.
+    - Move the pointers forward to process the next node.
+  - Return `prev` as the new head when traversal is complete.
+- **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list.
+- **Space Complexity**: \(O(1)\), as it modifies the list in place.
+
 ---
 
 ## Contact
