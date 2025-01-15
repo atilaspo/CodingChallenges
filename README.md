@@ -253,6 +253,19 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list.
 - **Space Complexity**: \(O(1)\), as it modifies the list in place.
 
+### 20. **[Merge Two Sorted Lists](merge-two-sorted-lists.py)**
+- **Goal**: Merge two sorted linked lists into one sorted linked list.
+- **Approach**:
+  - Use a **dummy node** as the starting point to simplify list construction.
+  - Use a pointer (`tail`) to keep track of the current end of the merged list.
+  - Compare nodes from both input lists (`list1` and `list2`):
+    - Append the smaller node to the merged list.
+    - Advance the pointer in the corresponding list.
+  - After exiting the loop, append any remaining nodes from one of the lists.
+  - Return the merged list starting from `dummy.next` to exclude the dummy node.
+- **Time Complexity**: \(O(n + m)\), where \(n\) and \(m\) are the lengths of `list1` and `list2`.
+- **Space Complexity**: \(O(1)\), as the merging is done in place.
+
 ---
 
 ## Contact
