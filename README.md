@@ -266,6 +266,16 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n + m)\), where \(n\) and \(m\) are the lengths of `list1` and `list2`.
 - **Space Complexity**: \(O(1)\), as the merging is done in place.
 
+### 21. **[Linked List Cycle Detection](linked-list-cycle-detection.py)**
+- **Goal**: Determine if a linked list contains a cycle. A cycle exists if any node can be revisited by continuously following the `next` pointers.
+- **Approach**: Use the **two pointers technique** (slow and fast):
+  - `slow` pointer moves one step at a time.
+  - `fast` pointer moves two steps at a time.
+  - If there is a cycle, the `fast` pointer will eventually meet the `slow` pointer.
+  - If there is no cycle, the `fast` pointer will reach the end of the list (`None`).
+- **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list.
+- **Space Complexity**: \(O(1)\), as no additional data structures are used.
+
 ---
 
 ## Contact
