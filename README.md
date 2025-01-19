@@ -276,6 +276,18 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list.
 - **Space Complexity**: \(O(1)\), as no additional data structures are used.
 
+### 22. **[Reorder Linked List](reorder-linked-list.py)**
+- **Goal**: Reorder a given singly linked list such that the new order alternates between the first node, the last node, the second node, the second last node, and so on.
+- **Approach**:
+  1. **Find the middle of the list**:
+     - Use the **two-pointer technique** (`slow` and `fast`) to locate the midpoint of the list.
+  2. **Reverse the second half**:
+     - Starting from the node after the midpoint, reverse the second half of the list using a three-pointer approach (`prev`, `curr`, and `temp`).
+  3. **Merge the two halves**:
+     - Alternate nodes from the first half and the reversed second half to form the reordered list.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the linked list.
+- **Space Complexity**: \(O(1)\), as the reordering is done in place.
+
 ---
 
 ## Contact
