@@ -305,6 +305,22 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list.
 - **Space Complexity**: \(O(1)\), as no extra space is used beyond the pointers.
 
+### 24. **[Copy Linked List with Random Pointer](copy-random-list.py)**
+- **Goal**: Create a deep copy of a linked list where each node has a `val`, a `next` pointer, and a `random` pointer that may point to any node in the list or `None`.
+
+- **Approach**:
+  1. **Use a HashMap**:
+     - Create a dictionary (`old_copy`) to map each original node to its corresponding copied node.
+  2. **First Pass**:
+     - Traverse the original list and create a copy of each node.
+     - Store the mapping between the original node and its copy in the dictionary.
+  3. **Second Pass**:
+     - Traverse the original list again to set up the `next` and `random` pointers for each copied node using the dictionary.
+  4. **Return**:
+     - Return the copied head node stored in the dictionary.
+
+- **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list. The list is traversed twice.
+- **Space Complexity**: \(O(n)\), due to the dictionary used for mapping original nodes to copied nodes.
 ---
 
 ## Contact
