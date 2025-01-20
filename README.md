@@ -288,6 +288,23 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the linked list.
 - **Space Complexity**: \(O(1)\), as the reordering is done in place.
 
+### 23. **[Remove Node From End of Linked List](remove-nth-node-from-end.py)**
+- **Goal**: Remove the \(n\)-th node from the end of a singly linked list and return the updated list.
+- **Approach**:
+  1. **Create a dummy node**:
+     - A dummy node is created and points to the head of the list to simplify edge cases.
+  2. **Use two pointers (`slow` and `fast`)**:
+     - Move the `fast` pointer \(n + 1\) steps ahead to create a gap of \(n\) nodes between `slow` and `fast`.
+  3. **Traverse the list**:
+     - Move both `slow` and `fast` pointers until `fast` reaches the end of the list. At this point, `slow` is just before the node to be removed.
+  4. **Remove the node**:
+     - Adjust the `next` pointer of `slow` to skip the node to be removed.
+  5. **Return the updated list**:
+     - Return `dummy.next`, which points to the updated list.
+
+- **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list.
+- **Space Complexity**: \(O(1)\), as no extra space is used beyond the pointers.
+
 ---
 
 ## Contact
