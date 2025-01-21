@@ -321,6 +321,25 @@ This repository contains my solutions to various programming and algorithmic cha
 
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes in the linked list. The list is traversed twice.
 - **Space Complexity**: \(O(n)\), due to the dictionary used for mapping original nodes to copied nodes.
+
+### 25. **[Add Two Numbers](add-two-numbers.py)**
+- **Goal**: Add two numbers represented as reversed linked lists and return their sum as a linked list.
+- **Approach**:
+  1. **Create a Dummy Node**:
+     - Start with a dummy node to simplify list construction.
+  2. **Traverse the Lists**:
+     - Traverse both input linked lists while keeping track of the carry.
+  3. **Calculate the Sum**:
+     - For each node, calculate the sum of the values from both lists and the carry.
+     - Update the carry for the next iteration.
+  4. **Build the Result List**:
+     - Create a new node for each digit of the sum and append it to the result list.
+  5. **Handle Remaining Carry**:
+     - If a carry remains after processing both lists, add an additional node with the carry value.
+
+- **Time Complexity**: \(O(\max(m, n))\), where \(m\) and \(n\) are the lengths of the input linked lists.
+- **Space Complexity**: \(O(\max(m, n))\), for the result linked list.
+
 ---
 
 ## Contact
