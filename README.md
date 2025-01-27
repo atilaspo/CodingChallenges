@@ -340,6 +340,19 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(\max(m, n))\), where \(m\) and \(n\) are the lengths of the input linked lists.
 - **Space Complexity**: \(O(\max(m, n))\), for the result linked list.
 
+### 14. [Merge K Sorted Linked Lists](merge-k-sorted-linked-lists.py)
+- **Goal**: Merge an array of `k` linked lists, where each list is sorted in ascending order, into one sorted linked list.
+- **Approach**: 
+  - Use a divide-and-conquer strategy:
+    1. Merge pairs of linked lists iteratively until there is only one list left.
+    2. For each pair of lists, merge them using the `mergeLists` function (similar to merging two sorted lists).
+  - Use a dummy node to simplify the merging process.
+- **Time Complexity**: \(O(n⋅log k)\)
+  - \(n\): Total number of nodes across all linked lists.
+  - \(k\): Number of linked lists.
+- **Space Complexity**: \(O(1)\) (in-place merging, not counting the output linked list).
+
+
 ---
 
 ## Contact
