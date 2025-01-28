@@ -340,7 +340,7 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(\max(m, n))\), where \(m\) and \(n\) are the lengths of the input linked lists.
 - **Space Complexity**: \(O(\max(m, n))\), for the result linked list.
 
-### 14. [Merge K Sorted Linked Lists](merge-k-sorted-linked-lists.py)
+### 26. [Merge K Sorted Linked Lists](merge-k-sorted-linked-lists.py)
 - **Goal**: Merge an array of `k` linked lists, where each list is sorted in ascending order, into one sorted linked list.
 - **Approach**: 
   - Use a divide-and-conquer strategy:
@@ -352,7 +352,15 @@ This repository contains my solutions to various programming and algorithmic cha
   - \(k\): Number of linked lists.
 - **Space Complexity**: \(O(1)\) (in-place merging, not counting the output linked list).
 
-
+### 27. [Longest Substring Without Repeating Characters](longest-substring.py)
+- **Problem**: Given a string, find the length of the longest substring that contains no duplicate characters.
+- **Approach**:
+  - Use the **sliding window technique** with two pointers (`start` and `end`).
+  - Maintain a set to keep track of characters in the current substring.
+  - Expand the window by moving `end` and shrink it by moving `start` whenever a duplicate is found.
+  - Keep track of the maximum window size during the process.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the string.
+- **Space Complexity**: \(O(m)\), where \(m\) is the number of unique characters in the string.
 ---
 
 ## Contact
