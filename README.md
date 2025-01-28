@@ -361,7 +361,22 @@ This repository contains my solutions to various programming and algorithmic cha
   - Keep track of the maximum window size during the process.
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the string.
 - **Space Complexity**: \(O(m)\), where \(m\) is the number of unique characters in the string.
+
+### 28. [Longest Repeating Character Replacement](longest-repeating-character-replacement.py)
+- **Problem**: Given a string `s` and an integer `k`, find the length of the longest substring that can be formed by replacing at most `k` characters with the same character.
+- **Approach**:
+  - Use the **sliding window technique** with two pointers (`L` and `R`).
+  - Maintain a frequency dictionary (`memory`) to count characters in the current window.
+  - Check if the current window is valid by ensuring:
+    
+    \\(\text{window size} - \text{frequency of most common character} \leq k\)
+
+  - If the window becomes invalid, move the `L` pointer to shrink the window.
+  - Keep track of the maximum window size during the process.
+- **Time Complexity**: \(O(n)\), where \(n\) is the length of the string.
+- **Space Complexity**: \(O(m)\), where \(m\) is the number of unique characters in the string.
 ---
+
 
 ## Contact
 
