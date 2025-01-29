@@ -384,6 +384,17 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: \(O(\log(m 	imes n))\), where \(m\) is the number of rows and \(n\) is the number of columns.
 - **Space Complexity**: \(O(1)\).
 
+### 30. [Binary Search](binary-search.py)
+- **Problem**: Given a sorted array of distinct integers `nums` and a target value, return the index of the target if it exists, otherwise return `-1`.
+- **Approach**:
+  - Use the **binary search technique** with two pointers (`L` and `R`).
+  - Calculate the middle index `M`.
+  - Compare the middle element `nums[M]` with the `target`:
+    - If `nums[M] == target`, return the index `M`.
+    - If `nums[M] > target`, move the right pointer `R` to `M - 1`.
+    - If `nums[M] < target`, move the left pointer `L` to `M + 1`.
+- **Time Complexity**: \(O(\log n)\), where \(n\) is the length of the array.
+- **Space Complexity**: \(O(1)\).
 ---
 
 
