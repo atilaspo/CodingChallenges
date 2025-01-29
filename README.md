@@ -375,7 +375,17 @@ This repository contains my solutions to various programming and algorithmic cha
   - Keep track of the maximum window size during the process.
 - **Time Complexity**: \(O(n)\), where \(n\) is the length of the string.
 - **Space Complexity**: \(O(m)\), where \(m\) is the number of unique characters in the string.
+
+### 29. [Search a 2D Matrix](search-2D-matrix.py)
+- **Problem**: Given an \(m 	imes n\) 2D integer array `matrix`, return `True` if `target` exists within the matrix, otherwise return `False`.
+- **Approach**:
+  - Perform **binary search** to find the correct row where `target` may exist.
+  - Perform another **binary search** within the selected row.
+- **Time Complexity**: \(O(\log(m 	imes n))\), where \(m\) is the number of rows and \(n\) is the number of columns.
+- **Space Complexity**: \(O(1)\).
+
 ---
+
 
 
 ## Contact
