@@ -395,6 +395,17 @@ This repository contains my solutions to various programming and algorithmic cha
     - If `nums[M] < target`, move the left pointer `L` to `M + 1`.
 - **Time Complexity**: \(O(\log n)\), where \(n\) is the length of the array.
 - **Space Complexity**: \(O(1)\).
+
+### 31. [Koko Eating Bananas](koko-eating-bananas.py)
+- **Goal**: Given an array `piles` where `piles[i]` is the number of bananas in the *i*-th pile, and an integer `h` (the number of hours), find the minimum integer `k` (eating speed) such that Koko can finish all bananas within `h` hours. Each hour, she can eat up to `k` bananas from exactly one pile (if a pile has fewer than `k`, she finishes that pile in less than an hour and cannot use the remaining time on another pile).
+- **Approach**:
+  - Use **binary search** on the eating speed `k`, from `1` to `max(piles)`.
+  - For each candidate `k`, compute the total hours needed by summing `(pile + k - 1) // k` for each pile (this is effectively `ceil(pile / k)`).
+  - If the total hours is `<= h`, move the upper bound down to try a smaller `k`; otherwise, move the lower bound up to try a larger `k`.
+- **Time Complexity**: `O(n log m)`, where `n = len(piles)` and `m = max(piles)`.
+- **Space Complexity**: `O(1)`, since we only use a few variables for the binary search.
+
+
 ---
 
 
