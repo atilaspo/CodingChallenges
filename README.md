@@ -405,10 +405,22 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: `O(n log m)`, where `n = len(piles)` and `m = max(piles)`.
 - **Space Complexity**: `O(1)`, since we only use a few variables for the binary search.
 
+### 31. [Find Minimum in Rotated Sorted Array](find-minimum-in-rotated-sorted-array.py)
+
+- **Goal**: Given a rotated sorted array `nums` (originally sorted in ascending order and then rotated between `1` and `n` times), find the **minimum element** in `O(log n)` time.
+
+- **Approach**:
+  - Use **binary search** to efficiently find the minimum element.
+  - Maintain two pointers, `L` (left) and `R` (right), to define the search space.
+  - **Key Observations:**
+    - If `nums[MED] > nums[R]`, the **minimum is in the right half** (move `L` to `MED + 1`).
+    - If `nums[MED] <= nums[R]`, the **minimum is in the left half or at `MED`** (move `R` to `MED`).
+  - The search continues until `L == R`, at which point `nums[L]` is the minimum.
+
+- **Time Complexity**: `O(log n)`, as the search space is halved at each step.
+- **Space Complexity**: `O(1)`, since only a few variables are used.
 
 ---
-
-
 
 ## Contact
 
