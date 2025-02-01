@@ -420,6 +420,32 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Time Complexity**: `O(log n)`, as the search space is halved at each step.
 - **Space Complexity**: `O(1)`, since only a few variables are used.
 
+### 32. [Permutation in String](check-permutation.py)
+
+- **Goal**:  
+  Given two strings `s1` and `s2`, determine if `s2` contains any permutation of `s1` as a substring. That is, return `True` if there exists a substring in `s2` that is an anagram of `s1`; otherwise, return `False`.
+
+- **Approach**:  
+  - Use a **sliding window** of fixed size equal to `len(s1)` to traverse `s2`.
+  - Create two arrays of fixed size 26 (for the 26 lowercase letters):
+    - `s1_ch_count`: counts the frequency of each character in `s1`.
+    - `window_s2_ch_count`: counts the frequency of characters in the current window of `s2`.
+  - Initialize the window counter for `s2` using the first `len(s1)` characters.
+  - Compare the initial window counter with `s1_ch_count`. If they are equal, a permutation has been found, so return `True`.
+  - Slide the window across `s2`:
+    - Add the character that enters the window (increment its frequency).
+    - Remove the character that leaves the window (decrement its frequency).
+    - At each step, compare the updated window counter with `s1_ch_count`. If they match, return `True`.
+  - If the entire string is traversed without a match, return `False`.
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the length of `s2`.  
+  - Initializing the counters takes `O(m)` with `m = len(s1)`.
+  - Sliding the window is performed in `O(n - m)`, and each update is `O(1)` (comparing two arrays of constant size).
+
+- **Space Complexity**:  
+  `O(1)`, as only two fixed-size arrays (each of size 26) are used, regardless of input size.
+
 ---
 
 ## Contact
