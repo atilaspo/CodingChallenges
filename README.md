@@ -446,7 +446,7 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Space Complexity**:  
   `O(1)`, as only two fixed-size arrays (each of size 26) are used, regardless of input size.
 
-### 33 [Invert Binary Tree](invert-binary-tree.py)  
+### 33. [Invert Binary Tree](invert-binary-tree.py)  
 
 - **Goal**: Given the root of a binary tree, invert it by swapping the left and right children of all nodes in the tree.
 
@@ -466,7 +466,7 @@ This repository contains my solutions to various programming and algorithmic cha
   - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
   - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.
 
-### 34 [Maximum Depth of Binary Tree](max-depth-if-binary-tree.py)  
+### 34. [Maximum Depth of Binary Tree](max-depth-if-binary-tree.py)  
 
 - **Goal**: Given the root of a binary tree, return its depth, which is the number of nodes along the longest path from the root to the farthest leaf node.
 
