@@ -466,6 +466,26 @@ This repository contains my solutions to various programming and algorithmic cha
   - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
   - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.
 
+### 34 [Maximum Depth of Binary Tree](max-depth-if-binary-tree.py)  
+
+- **Goal**: Given the root of a binary tree, return its depth, which is the number of nodes along the longest path from the root to the farthest leaf node.
+
+- **Approach**:  
+  - Use a **recursive depth-first traversal** to determine the depth of the tree.  
+  - If the node is `None`, return `0` (base case).  
+  - Recursively calculate the depth of the left and right subtrees.  
+  - The depth of the current node is `1 + max(left_depth, right_depth)`.  
+  - Return the computed depth.  
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the number of nodes in the tree.  
+  - Each node is visited once.
+
+- **Space Complexity**:  
+  - `O(h)`, where `h` is the height of the tree (recursion depth).  
+  - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
+  - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.  
+
 ---
 
 ## Contact
