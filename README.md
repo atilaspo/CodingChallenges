@@ -446,6 +446,26 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Space Complexity**:  
   `O(1)`, as only two fixed-size arrays (each of size 26) are used, regardless of input size.
 
+### 33 [Invert Binary Tree](invert-binary-tree.py)  
+
+- **Goal**: Given the root of a binary tree, invert it by swapping the left and right children of all nodes in the tree.
+
+- **Approach**:  
+  - Use a **recursive depth-first traversal** to visit each node.  
+  - If the node is `None`, return immediately (base case).  
+  - Recursively call the function on the left and right subtrees.  
+  - After the recursive calls, swap the left and right children of the current node.  
+  - Finally, return the modified root.  
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the number of nodes in the tree.  
+  - Each node is visited once and its children are swapped in constant time.
+
+- **Space Complexity**:  
+  - `O(h)`, where `h` is the height of the tree (recursion depth).  
+  - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
+  - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.
+
 ---
 
 ## Contact
