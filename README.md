@@ -486,6 +486,30 @@ This repository contains my solutions to various programming and algorithmic cha
   - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
   - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.  
 
+### 35. [Diameter of Binary Tree](diameter-of-binary-tree.py)
+
+- **Goal**:  
+  Given the root of a binary tree, return its diameter. The diameter is defined as the number of edges in the longest path between any two nodes in the tree (this path does not necessarily pass through the root).
+
+- **Approach**:  
+  - Use a **recursive depth-first search (DFS)** to traverse the tree.  
+  - For each node:
+    - Recursively compute the depth of its left subtree (`left`) and right subtree (`right`).  
+    - The **local diameter** at that node is the sum `left + right` (i.e., the number of edges from the deepest node in the left subtree to the deepest node in the right subtree passing through the current node).  
+    - Update a global variable (`self.res`) to keep track of the maximum diameter found so far.  
+    - Return the **depth** of the current node as `1 + max(left, right)` (this represents the maximum number of nodes on a path from the current node down to a leaf, including the current node).  
+  - **Base Case**:  
+    If the current node is `None`, return `0`.
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the number of nodes in the tree.  
+  - Each node is visited exactly once.
+
+- **Space Complexity**:  
+  `O(h)`, where `h` is the height of the tree (i.e., the maximum recursion depth).  
+  - In the worst-case scenario (a skewed tree), this is `O(n)`.  
+  - In the best-case scenario (a balanced tree), it is `O(log n)`.
+
 ---
 
 ## Contact
