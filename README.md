@@ -510,6 +510,26 @@ This repository contains my solutions to various programming and algorithmic cha
   - In the worst-case scenario (a skewed tree), this is `O(n)`.  
   - In the best-case scenario (a balanced tree), it is `O(log n)`.
 
+### 36. [Balanced Binary Tree](balanced-binary-tree.py)
+
+- **Goal**: Given the root of a binary tree, return `true` if it is height-balanced and `false` otherwise. A binary tree is height-balanced if the left and right subtrees of every node differ in height by no more than 1.
+
+- **Approach**:  
+  - Use a **recursive depth-first traversal** to compute the height of each subtree.  
+  - If the node is `None`, return `0` (base case).  
+  - Recursively calculate the height of the left and right subtrees.  
+  - For each node, check if the absolute difference between the heights of the left and right subtrees is greater than 1. If so, mark the tree as unbalanced using a global variable.  
+  - Return the height of the current node as `1 + max(left, right)`.
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the number of nodes in the tree.  
+  - Each node is visited exactly once.
+
+- **Space Complexity**:  
+  `O(h)`, where `h` is the height of the tree (recursion depth).  
+  - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
+  - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.
+
 ---
 
 ## Contact
