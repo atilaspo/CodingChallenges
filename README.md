@@ -530,6 +530,34 @@ This repository contains my solutions to various programming and algorithmic cha
   - In the worst case (`O(n)`, skewed tree), the recursion depth is `n`.  
   - In the best case (`O(log n)`, balanced tree), the recursion depth is `log n`.
 
+### 37.  [Same Binary Tree](same-binary-tree.py)
+
+- **Goal**:  
+  Given the roots of two binary trees `p` and `q`, determine if the trees are equivalent. Two binary trees are considered equivalent if they have the exact same structure and all corresponding nodes have the same values.
+
+- **Approach**:  
+  - Use a **recursive depth-first search (DFS)** to traverse both trees simultaneously.  
+  - For each corresponding pair of nodes in trees `p` and `q`:
+    - **Base Case 1**:  
+      If both nodes are `None`, then the subtrees are identical (return `True`).
+    - **Base Case 2**:  
+      If one node is `None` (and the other is not), the trees differ (return `False`).
+    - **Value Comparison**:  
+      If the values of the current nodes differ, return `False`.
+    - **Recursive Step**:  
+      Recursively check the left subtrees and the right subtrees:
+      - Let `left_pq` be the result of comparing `p.left` and `q.left`.
+      - Let `right_pq` be the result of comparing `p.right` and `q.right`.
+    - Return `left_pq and right_pq` to ensure that both subtrees must be identical for the overall trees to be considered the same.
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the number of nodes in the tree.  
+  - Each node in both trees is visited exactly once.
+
+- **Space Complexity**:  
+  `O(h)`, where `h` is the height of the tree (i.e., the maximum recursion depth).  
+  - In the worst-case scenario (a skewed tree), this is `O(n)`.
+  - In the best-case scenario (a balanced tree), it is `O(log n)`.
 ---
 
 ## Contact
