@@ -593,6 +593,27 @@ This repository contains my solutions to various programming and algorithmic cha
   - **O(h)**, where `h` is the height of the main tree `root` (due to the recursion stack).  
   - In the worst-case scenario (a skewed tree), this is **O(n)**.
 
+### 39. [Lowest Common Ancestor in Binary Search Tree](lowest-common-ancestor-bst.py)
+
+- **Goal**:  
+  Given a binary search tree (BST) where all node values are unique, and two nodes `p` and `q` from the tree, return the lowest common ancestor (LCA) of these nodes. The LCA is defined as the lowest node in the tree such that both `p` and `q` are descendants (a node can be a descendant of itself).
+
+- **Approach**:  
+  - Use an **iterative approach** to traverse the BST from the root.  
+  - At each node:
+    - If both `p` and `q` have values less than the current node's value, move to the left subtree.
+    - If both `p` and `q` have values greater than the current node's value, move to the right subtree.
+    - Otherwise, the current node is the split point where one node is on one side and the other is on the other side (or one is equal to the current node), so it is the LCA.
+  - **Note**: Using `elif` ensures that only one branch is taken per iteration.
+
+- **Time Complexity**:  
+  `O(h)`, where `h` is the height of the tree.  
+  - In the worst-case scenario (skewed tree), `h = n` and the complexity is `O(n)`.  
+  - In the average case (balanced BST), `h = log(n)`.
+
+- **Space Complexity**:  
+  `O(1)`, since the iterative solution uses a constant amount of extra space.
+
 
 ---
 
