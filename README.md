@@ -558,6 +558,42 @@ This repository contains my solutions to various programming and algorithmic cha
   `O(h)`, where `h` is the height of the tree (i.e., the maximum recursion depth).  
   - In the worst-case scenario (a skewed tree), this is `O(n)`.
   - In the best-case scenario (a balanced tree), it is `O(log n)`.
+
+### 38. [Subtree of Another Tree](subtree-of-another-tree.py)
+
+- **Goal**:  
+  Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values as `subRoot`, and `false` otherwise.  
+  A subtree of a binary tree is a tree that consists of a node in the main tree and all of its descendants. Note that the main tree can also be considered as a subtree of itself.
+
+- **Approach**:  
+  - Use a **recursive depth-first search (DFS)** to traverse the main tree `root`.
+  - For each node in `root`, check if the subtree rooted at that node is identical to `subRoot` by using a helper function `isSameTree`.  
+    - **`isSameTree` Function**:
+      - **Base Case 1**:  
+        If both nodes are `None`, return `true` (both subtrees are empty and thus identical).
+      - **Base Case 2**:  
+        If one node is `None` (but not both) or the node values differ, return `false`.
+      - **Recursive Step**:  
+        Recursively compare the left subtrees and the right subtrees.
+  - In `isSubtree`:
+    - **Base Case**:  
+      If `subRoot` is `None`, return `true` (an empty tree is always a subtree).
+      If `root` is `None`, return `false` (a non-empty `subRoot` cannot be a subtree of an empty tree).
+    - Check if the current subtree rooted at `root` is identical to `subRoot` using `isSameTree`.
+    - If not, recursively check whether `subRoot` is a subtree of either the left or the right subtree of `root`:
+      ```python
+      return self.isSubtree(root.right, subRoot) or self.isSubtree(root.left, subRoot)
+      ```
+
+- **Time Complexity**:  
+  Let `n` be the number of nodes in `root` and `m` be the number of nodes in `subRoot`.  
+  - In the worst case, for each node in `root` we may need to compare up to `m` nodes (if `subRoot` is similar to a part of `root`), leading to a time complexity of **O(n * m)**.
+
+- **Space Complexity**:  
+  - **O(h)**, where `h` is the height of the main tree `root` (due to the recursion stack).  
+  - In the worst-case scenario (a skewed tree), this is **O(n)**.
+
+
 ---
 
 ## Contact
