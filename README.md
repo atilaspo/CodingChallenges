@@ -614,7 +614,25 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Space Complexity**:  
   `O(1)`, since the iterative solution uses a constant amount of extra space.
 
+### 40. [Binary Tree Level Order Traversal](binary-tree-level-order-traversal.py)
 
+- **Goal**:  
+  Return the level order traversal of a binary tree as nested lists, where each sublist contains nodes at the same level.
+
+- **Approach**:  
+  - Use **Breadth-First Search (BFS)** with a queue.  
+  - Start with the root node in the queue.  
+  - For each level, process all nodes in the queue:  
+    - Pop nodes from the queue and add their values to a `level` list.  
+    - Add their children to the queue.  
+  - Append each `level` list to the result and continue until the queue is empty.
+
+- **Time Complexity**:  
+  `O(n)` — Each node is visited once.
+
+- **Space Complexity**:  
+  `O(n)`— Queue holds nodes at the largest level.
+  
 ---
 
 ## Contact
