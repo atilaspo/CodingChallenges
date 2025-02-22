@@ -632,7 +632,82 @@ This repository contains my solutions to various programming and algorithmic cha
 
 - **Space Complexity**:  
   `O(n)`— Queue holds nodes at the largest level.
+
+### 41. [Binary Tree Right Side View](binary-tree-right-side-view.py)
+
+- **Goal**:  
+  Given the root of a binary tree, return only the values of the nodes that are visible when the tree is viewed from the right side, ordered from top to bottom.
+
+- **Approach**:  
+  - Use a **recursive depth-first search (DFS)** that prioritizes the right subtree over the left subtree.  
+  - **Recursive Function** (`dfs`):  
+    - **Parameters**:  
+      - `node`: the current node in the tree.  
+      - `level`: the current depth (or level) in the tree.
+    - **Base Case**:  
+      If the current node is `None`, return immediately.
+    - **Recording the Rightmost Node**:  
+      When visiting a node, if the current `level` is equal to the length of the result list (`res`), it means this is the first node encountered at that level. Due to the right-first traversal, this node is the rightmost (and visible) node at that level, so add its value to `res`.
+    - **Recursive Steps**:  
+      - First, recursively call `dfs` on the **right child** with `level + 1`.  
+      - Then, recursively call `dfs` on the **left child** with `level + 1`.  
+  - This traversal order ensures that at each level, the rightmost node is the one added to the result.
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the total number of nodes in the tree, as every node is visited once.
+
+- **Space Complexity**:  
+  `O(h)`, where `h` is the height of the tree (due to the recursion stack).  
+  - In the worst-case scenario (a skewed tree), the space complexity can be `O(n)`.  
+  - In a balanced tree, it is `O(log n)`.
+
+### 42. [Count Good Nodes in Binary Tree](count-good-nodes-in-binary-tree.py)
+
+- **Goal**:  
+  Dado el nodo raíz de un árbol binario, contar el número de "nodos buenos".  
+  Un nodo se considera "bueno" si en el camino desde la raíz hasta ese nodo no hay ningún nodo con un valor mayor que el valor de ese nodo.
+
+- **Approach**:  
+  - Se utiliza una **búsqueda en anchura (BFS)** para recorrer el árbol.  
+  - La cola almacena tuplas en el formato `(nodo, max_val)` donde `max_val` es el valor máximo encontrado en el camino desde la raíz hasta ese nodo.  
+  - Para cada nodo:
+    - Si `nodo.val >= max_val`, se incrementa el contador de nodos buenos.
+    - Se actualiza el valor máximo para el camino a los hijos: `new_max = max(max_val, nodo.val)`.
+    - Se agregan los hijos a la cola junto con el valor actualizado.
   
+- **Time Complexity**:  
+  `O(n)`, donde `n` es el número de nodos en el árbol, ya que se procesa cada nodo una sola vez.
+
+- **Space Complexity**:  
+  `O(n)` en el peor caso, debido a la cola de BFS.
+
+"""
+### 43. [Valid Binary Search Tree](valid-bst.py)
+
+- **Goal**:  
+  Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST must satisfy the following:
+  - The left subtree of every node contains only nodes with keys **strictly less** than the node’s key.
+  - The right subtree of every node contains only nodes with keys **strictly greater** than the node’s key.
+  - Both the left and right subtrees must also be valid binary search trees.
+
+- **Approach**:  
+  - Use a **recursive depth-first search (DFS)** to traverse the tree.  
+  - For each node, check the following:
+    - **Immediate Child Comparison**:  
+      - If the left child exists, its value must be **less than** the current node’s value.  
+      - If the right child exists, its value must be **greater than** the current node’s value.
+    - **Recursive Traversal**:  
+      - Recursively apply the same check to both the left and right subtrees.
+  - A `nonlocal` variable `valid` is used to keep track of whether any violation of the BST properties is found.
+  - **Note**:  
+    This solution only compares a node with its immediate children. It does not enforce the BST property for all nodes in the subtrees (i.e., it does not ensure that all nodes in the left subtree are less than the current node, and all nodes in the right subtree are greater). This limitation means that the solution might not catch some invalid BST configurations.
+
+- **Time Complexity**:  
+  `O(n)`, where `n` is the number of nodes in the tree, since each node is visited exactly once.
+
+- **Space Complexity**:  
+  `O(h)`, where `h` is the height of the tree (due to the recursion stack). In the worst-case scenario (a skewed tree), this is `O(n)`.
+
 ---
 
 ## Contact
