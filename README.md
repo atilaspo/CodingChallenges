@@ -708,6 +708,26 @@ This repository contains my solutions to various programming and algorithmic cha
 - **Space Complexity**:  
   `O(h)`, where `h` is the height of the tree (due to the recursion stack). In the worst-case scenario (a skewed tree), this is `O(n)`.
 
+### 44. [Kth Smallest Integer in BST](kth-smallest-in-bst.py)
+
+- **Goal**:  
+  Given the root of a binary search tree, return the `k`th smallest value (1-indexed) in the tree.
+
+- **Approach**:  
+  - Use **Inorder Traversal (Iterative using a Stack)** since an inorder traversal of a BST yields values in ascending order.
+  - Maintain a **stack** for iterative inorder traversal.
+  - Traverse the tree:
+    - Push nodes onto the stack while moving left.
+    - Pop from the stack, increment a counter, and check if it matches `k`.
+    - If found, return the current node's value.
+    - Otherwise, move to the right child and continue the process.
+
+- **Time Complexity**:  
+  `O(n)`, since each node is pushed and popped from the stack at most once.
+
+- **Space Complexity**:  
+  `O(h)`, where `h` is the height of the BST. In the worst case, `O(n)` for an unbalanced tree and `O(log n)` for a balanced tree.
+
 ---
 
 ## Contact
